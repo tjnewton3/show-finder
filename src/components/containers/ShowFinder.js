@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../../actions/showsActions';
 import SearchForm from "../SearchForm";
+import ListShows from "../ListShows";
 
 export class ShowFinder extends React.Component {
 
@@ -13,21 +14,30 @@ export class ShowFinder extends React.Component {
 
   render() {
     return (
-      <SearchForm handleSubmit={this.fetchResults} />
+      <div>
+      <div className="row">
+        <div className="col">
+          <SearchForm handleSubmit={this.fetchResults} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <ListShows shows={this.props.shows.shows} />
+        </div>
+      </div>
+      </div>
     );
   }
 }
 
 ShowFinder.propTypes = {
   actions: PropTypes.object.isRequired,
-  shows: PropTypes.array.isRequired,
-  searchPhrase: PropTypes.string.isRequired
+  shows: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    shows: state.shows.shows,
-    searchPhrase: state.shows.searchPhrase
+    shows: state.shows
   };
 }
 

@@ -16,12 +16,16 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <header>
-          <h3>Show Finder</h3>
+          <div className="container">
+            <h3>Show Finder</h3>
+          </div>
         </header>
-        <Switch>
-          <Route exact path="/" component={ShowFinder} />
-          <Route component={NotFoundPage} />
-        </Switch>
+        <div className="container content-container">
+          <Switch>
+            <Route exact path="/" component={ShowFinder} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
       </div>
     );
   }

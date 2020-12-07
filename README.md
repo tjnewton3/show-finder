@@ -1,11 +1,11 @@
-#React Assessment "TV Show Finder"
+# React Assessment "TV Show Finder"
 
 * Core technologies: React, Redux, HTML/CSS
 * Boilerplate: [react-slingshot](https://github.com/coryhouse/react-slingshot)
 
-##Installation
+## Installation
 
-Clone project then
+Clone project, then
 
 ```shell
 yarn install

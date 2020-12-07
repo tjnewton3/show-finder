@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "16.10.2",
+    "bootstrap": "4.5.3",
     "connected-react-router": "6.5.2",
     "object-assign": "4.1.1",
     "react": "16.11.0",

@@ -17,12 +17,13 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-form d-flex">
         <input
           onChange={e => this.updateInput(e.target.value)}
           value={this.state.input}
+          className="form-control"
         />
-        <button className="add-todo" onClick={this.handleSearch}>
+        <button className="btn btn-primary add-todo" onClick={this.handleSearch}>
           Search
         </button>
       </div>
